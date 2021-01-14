@@ -24,7 +24,7 @@
     },
     "require": {
         "php": "^7.2|~8.0",
-        "doctrine/doctrine-module": "~2.1.10",
+        "doctrine/doctrine-module": "~2.1.10|^3.0|^4.0",
         "zendframework/zend-form": "^2.3",
         "zendframework/zend-filter": "^2.3",
         "zendframework/zend-validator": "^2.3",
