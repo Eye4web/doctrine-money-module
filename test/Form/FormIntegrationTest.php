@@ -9,7 +9,7 @@ use Money\InvalidArgumentException;
 use Zend\Form\Form;
 use Zend\Form\Fieldset;
 use Zend\Form\FormElementManager;
-use Zend\Stdlib\Hydrator\ClassMethods;
+use Laminas\Hydrator\ClassMethodsHydrator;
 use ZFBrasil\DoctrineMoneyModule\Form\Factory\MoneyFieldsetFactory;
 use ZFBrasil\DoctrineMoneyModule\Form\MoneyFieldset;
 use ZFBrasil\Test\DoctrineMoneyModule\TestAsset\Model\HasMoneyPropertyModel;
@@ -77,7 +77,7 @@ class FormIntegrationTest extends TestCase
 
         $fieldset = new Fieldset('hasMoneyElementFieldset');
         $fieldset->add($element, ['name' => 'price']);
-        $fieldset->setHydrator(new ClassMethods());
+        $fieldset->setHydrator(new ClassMethodsHydrator());
         $fieldset->setUseAsBaseFieldset(true);
 
         $form = new Form();
