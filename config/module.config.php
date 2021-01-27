@@ -1,6 +1,6 @@
 <?php
 
-use Doctrine\Common\Persistence\Mapping\Driver\PHPDriver;
+use Doctrine\Persistence\Mapping\Driver\PHPDriver;
 use ZFBrasil\DoctrineMoneyModule\Form\Factory\MoneyFieldsetFactory;
 use ZFBrasil\DoctrineMoneyModule\Form\MoneyFieldset;
 use ZFBrasil\DoctrineMoneyModule\View\Helper\MoneyFormat;
@@ -29,13 +29,13 @@ return [
     'doctrine' => [
         'driver' => [
             'money_driver_orm' => [
-                'class' => PHPDriver::class,
+                'class' => \Doctrine\Persistence\Mapping\Driver\PHPDriver::class,
                 'paths' => [
                     __DIR__ . '/../mapping/PHPDriver/orm'
                 ]
             ],
             'money_driver_odm_mongodb' => [
-                'class' => PHPDriver::class,
+                'class' => \Doctrine\Persistence\Mapping\Driver\PHPDriver::class,
                 'paths' => [
                     __DIR__ . '/../mapping/PHPDriver/odm-mongodb'
                 ]
